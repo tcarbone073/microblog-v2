@@ -16,6 +16,8 @@ from flask_migrate import Migrate
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 
+# TODO: Left off here with removing flask_babel calls
+
 db = SQLAlchemy()
 migrate = Migrate()
 login = LoginManager()
