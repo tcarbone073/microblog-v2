@@ -7,8 +7,6 @@ from config import Config
 from flask import Flask
 from flask import current_app
 from flask import request
-from flask_babel import Babel
-from flask_babel import lazy_gettext as _l
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_mail import Mail
@@ -24,7 +22,6 @@ login.login_message = "Please log in to access this page."
 mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
-babel = Babel()
 
 
 def create_app(config_class=Config):
@@ -37,7 +34,6 @@ def create_app(config_class=Config):
     mail.init_app(app)
     bootstrap.init_app(app)
     moment.init_app(app)
-    babel.init_app(app)
 
     from app.errors import bp as errors_bp
 
